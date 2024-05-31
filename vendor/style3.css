@@ -1,0 +1,431 @@
+body {
+    margin: 0;
+  }
+ .heading{
+    text-align: center;
+    margin:0;
+    padding: 18px 0px;
+    width: 100%;
+    background-color: #064265;
+    color:#fff;
+ }
+
+ .topnav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .topnav a {
+    color: #000000;
+    text-align: center;
+    padding: 17px 16px;
+    text-decoration: none;
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .topnav a:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+  .active {
+    background-color: #ffffff;
+    color: black;
+  } 
+ .container {
+    display: flex;
+    height: 100vh;
+ }
+
+ #left{
+    width: 20%;
+    background-color: #385768;
+ }
+
+#right{
+    width: 80%;
+    background-color: #ffffff
+
+ }
+
+ /* profile navbar */
+
+
+ .profile {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile h2 {
+    text-align: center;
+}
+
+.profile button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.profile button:hover {
+    background-color: #45a049;
+}
+
+/* product and price */
+
+.product-and-price h1{
+  text-align: center;
+  
+}
+
+.product-and-price{
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-and-price table{
+  width: 100%;
+  color: #000000;
+}
+
+.product-table th {
+  padding: 16px 0px ;
+  background-color: 	#3d3d3d;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+.product-and-price table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.product-and-price button {
+  width: auto;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #04AA6D;
+  border: .5px solid black;
+  border-radius: 2px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* add new product and price box */
+
+/* add new product box */
+
+.add-product-box{
+  position: relative;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 4px #000000;
+  border-radius: 2px;
+
+}
+
+.p-input{
+  display: inline-block;
+  margin:10px ;
+  overflow: hidden;
+}
+ #btn{
+  width: 15%;
+  position: relative;
+  left: 40%;
+  background-color: #04AA6D;
+  padding: 5px 10px;
+  margin: 6px; 
+  border: 1px solid black;
+}
+
+  /* update product and price box */
+
+  .update-product-box{
+    position: relative;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 4px #000000;
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  #update-product-form #btn{
+    width: 15%;
+    position: relative;
+    left: 40%;
+  }
+  #update-btn{
+    width: 15%;
+    position: relative;
+    left: 40%;
+    background-color: #04AA6D;
+    padding: 5px 10px;
+    margin: 6px; 
+    border: 1px solid black;
+  }
+
+/*---------- quotation -------------*/
+
+  .quotation{
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .quotation h1{
+    text-align: center;
+  }
+
+ /* quotation boxes */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+   }
+
+.quotation-box1, .quotation-box2{
+  display: flex ;
+}
+.quotation-box1 .vendor-name h2{
+  color: #064265;
+  font-size: 40px;
+}
+.quotation-box1 .quote-number{
+  margin-left: auto; 
+}
+.quotation-box2 .quote-detail{
+  margin-left: auto; 
+
+}
+.quotation-box2 .q-input{
+  width: 63%;
+}
+
+/* quotation product table */
+
+
+.quotation-box3 table{
+  width: 100%; 
+  overflow-x: auto;
+  overflow-y: auto; 
+  max-width: 100%; 
+  color: #000000;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.quotation-box3 th {
+  padding: 16px 0px ;
+  background-color: 	#3d3d3d;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+.quotation-box3 table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+.quotation-box4 div{
+  display: inline;
+  margin: 5%;
+}
+/* submit btn */
+.quotaion-submit-btn{
+  width: 15%;
+  background-color: #04AA6D;
+  padding: 5px 10px;
+  margin: 6px; 
+  border: 1px solid black;
+}
+
+/* --------invoice---------- */
+
+.invoice{
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.invoice-box1, .invoice-box2{
+ display: flex;
+}
+.invoice-box1 .invoice-name{
+ margin-left: auto;
+}
+.invoice-box1 .invoice-name h1{
+  color:#b7b7b7;
+ }
+
+ .invoice-box2 .bill-to{
+  width: 49%;
+  margin-right: 1%;
+
+ }
+ .invoice-box2 .bill-to h3{
+  background-color: #b7b7b7;
+  padding: 10px;
+ }
+
+ .invoice-box2 .ship-to{
+  width: 49%;
+  
+ }
+
+ .invoice-box2 .ship-to h3{
+  background-color: #b7b7b7;
+  padding: 10px;
+ }
+
+ /* invoice table */
+
+ .invoice-box3 table{
+  width: 100%; 
+  overflow-x: auto;
+  overflow-y: auto; 
+  max-width: 100%; 
+  color: #000000;
+  border: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+.invoice-box3 th {
+  padding: 16px 0px ;
+  background-color:  #b7b7b7;
+  color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+.invoice-box3 table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* invoice total table */
+.invoice-box4 table{
+  width: auto; 
+  overflow-x: auto;
+  overflow-y: auto; 
+  max-width: 100%; 
+  color: #000000;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  float: right;
+}
+
+.invoice-box4 th {
+  padding: 4px 0px ;
+  background-color:  #b7b7b7;
+  color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+.invoice-box4 table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+.invoice-box4 table td {
+width: 47%;
+}
+
+/* footer of invoice */
+
+.invoice-box5 {
+  opacity: .5;
+}
+
+.invoice-box5 h2{
+  text-align: center;
+}
+
+.invoice-box5 .footAddress {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* goods receipt */
+
+.goodsReceipt{
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.goods-box1,.goods-box3{
+ display: flex;
+}
+.goods-box1 .goods-name, .goods-box3 .checkedby{
+ margin-left: auto;
+}
+.goods-box1 .goods-name h1{
+  color:#106b00;
+ }
+
+ .goods-box2 table{
+  width: 100%; 
+  overflow-x: auto;
+  overflow-y: auto; 
+  max-width: 100%; 
+  color: #000000;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.goods-box2 th {
+  padding: 4px 0px ;
+  background-color:  #b7b7b7;
+  color: #000000;
+  position: sticky;
+  top: 0;
+  z-index: 1; 
+}
+.goods-box2 table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}
+#line{
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.goods-box3 div p{
+  margin-top: 0px;
+}

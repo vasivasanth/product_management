@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor</title>
+</head>
+<link rel="stylesheet" href="./style3.css">
+<body>
+    <h1 class="heading">Vendor</h1>
+
+
+<div class="container">
+
+<!-- navbar 30 percent -->
+   <div id="left">
+       <div class="topnav">
+           <a class="nav" href="#" onclick="profileFun()">Profile</a>
+           <a class="nav" href="#" onclick="productPriceFun()">Products and Price</a>
+           <a class="nav" href="#" onclick="quotationFun()">Quotation</a>
+           <a class="nav" href="#" onclick="invoiceFun()">Invoice</a>
+           <a class="nav" href="#" onclick="goodsReceiptFun()">Goods Receipt</a>
+           <a class="nav" href="./vendorlogin.html">log out</a>
+
+       </div>
+   </div>
+   <div id="right">
+       
+     <!-- vendor profile -->
+
+        <div id="profile" class="profile" style="visibility: visible; display: block;">
+            <div id="profileDetails" >
+                <h2>Vendor Profile Details</h2>
+                <p id="CompanyName"></p>
+                <p id="Website"></p>
+                <p id="Email"></p>
+                <p id="Phone"></p>
+                <p id="Street"></p>
+                <p id="City"></p>
+                <p id="State"></p>
+                <p id="Zip"></p>
+                <p id="Country"></p>
+                <p id="Services"></p>
+            </div>
+            <button id="editButton">Edit Profile</button>
+        </div>
+
+        <!-- products and pricelist -->
+
+       <div id="product-and-price" class="product-and-price" style="visibility: hidden; display: none;">
+             <h1>Price List</h1> 
+             <table id="product-table">
+                <tr>
+                   <th>Product Id</th>
+                   <th>Product Name</th>
+                   <th>Unit of Measurement</th>
+                   <th>StorageBin No</th>
+                   <th>Brand</th>
+                   <th>unit Price</th>    
+                </tr>
+                <tr>
+                   <td>1</td>
+                   <td>Men's face wash</td>
+                   <td>150 gram</td>
+                   <td>sb-21</td>
+                   <td>Himalayan</td>
+                   <td>145</td>
+                </tr>
+            </table>
+         
+            <button onclick="newproduct()">Add new product and price</button>
+            <button onclick="updateproduct()">Update product price</button>
+           
+    <!-- adding product and price box -->
+ 
+    <div class="add-product-box" id="add-product-box" style="visibility: hidden; display: none;">
+    
+                <form id="add-product-form" action="#">
+                
+                       <h1>Adding new product</h1>
+                        <div class="p-input">
+                        <label for="">Product ID</label> <br>
+                        <input id="product-id" type="text"> <br>
+                    </div>
+            
+                    <div class="p-input">
+                        <label for="">Product Name</label> <br>
+                        <input id="product-name" type="text"> <br>
+                    </div>
+            
+                    <div class="p-input">
+                        <label for="">Unit of Measurement</label> <br>
+                        <input id="uom" type="text"> <br>
+                    </div>
+                    <div class="p-input">
+                        <label for="">StorageBin No</label> <br>
+                        <input id="category" type="text"> <br>
+                        <!-- <select id="category">
+                            <option value="Rice">Rice</option>
+                            <option value="Hair oil">Hair oil</option>
+                            <option value="Sunscreen">Sunscreen</option>
+                            <option value="Shampoo">Shampoo</option>
+                        </select> <br> -->
+                    </div>
+                    <div class="p-input">
+                        <label for="">Brand</label> <br>
+                        <input id="brand" type="text"> <br>
+                    </div>
+            
+                    <div class="p-input">
+                        <label for="">Price</label> <br>
+                        <input id="price" type="text"> <br>
+                    </div>
+            
+
+                <br>
+                <input id="btn" type="submit" value="Add">
+                </form>
+            
+            </div>
+
+
+<!-- updating products -->
+
+<div class="update-product-box" id="update-product-box" style="visibility: hidden; display: none;">
+    
+    <form id="update-product-form" action="#">
+    
+           <h1>Update product</h1>
+            <div class="p-input">
+            <label for="">Product ID</label> <br>
+            <input id="u-product-id" type="text"> <br>
+        </div>
+
+        <div class="p-input">
+            <label for="">Product Name</label> <br>
+            <input id="u-product-name" type="text"> <br>
+        </div>
+
+        <div class="p-input">
+            <label for="">Unit of Measurement</label> <br>
+            <input id="u-uom" type="text"> <br>
+        </div>
+        <div class="p-input">
+            <label for="">StorageBin No</label> <br>
+            <input id="u-category" type="text"> <br>
+            <!-- <select id="category">
+                <option value="Rice">Rice</option>
+                <option value="Hair oil">Hair oil</option>
+                <option value="Sunscreen">Sunscreen</option>
+                <option value="Shampoo">Shampoo</option>
+            </select> <br> -->
+        </div>
+        <div class="p-input">
+            <label for="">Brand</label> <br>
+            <input id="u-brand" type="text"> <br>
+        </div>
+
+        <div class="p-input">
+            <label for="">Price</label> <br>
+            <input id="u-price" type="text"> <br>
+        </div>
+
+ 
+    <br>
+    <input id="update-btn" type="submit" value="Update">
+    </form>
+   
+</div>
+
+</div>
+
+    <!-- quotation    -->
+    <div id="quotation" class="quotation" style="visibility: hidden; display: none;">
+            
+       <!-- box1 -->
+
+        <div class="quotation-box1 clearfix">
+            <div class="vendor-name">
+               <h2>jio mart</h2> <br>
+         
+            </div>
+            <div class="quote-number">
+               <h2>Quote</h2> 
+            </div>
+        </div>
+
+        <!-- box2 -->
+
+        <div class="quotation-box2 clearfix">
+            <div class="vendor-name">
+               <h2>customer:</h2> 
+               <p id="name"> [name]</p>
+               <p id="address">[address]</p>
+               <p id="phone">[phone no]</p>
+         
+            </div>
+            <div class="quote-detail">
+                <p><b>quote date:&nbsp; &nbsp; &nbsp; </b> <input class="q-input" type="date">  </p>
+                <p><b>valid until:&nbsp; &nbsp; &nbsp;</b> <input class="q-input" type="date">  </p>
+                <p><b>quote #: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</b> <input class="q-input" type="text">  </p>
+                <p><b>customer id:&nbsp; &nbsp;</b> <input class="q-input" type="text">  </p>
+            </div>
+
+        </div>
+
+        <!-- box-3 -->
+        <div class="quotation-box3 clearfix">
+            <table id="quotation-table">
+                <tr>
+                   <th>S.No</th>
+                   <th>Product Name</th>
+                   <th>Unit of Measurement</th>
+                   <th>Brand</th>
+                   <th>unit Price</th>    
+                </tr>
+                <tr>
+                   <td>1</td>
+                   <td>Men's face wash</td>
+                   <td>150 gram</td>
+                   <td>Himalayan</td>
+                   <td>145</td>
+                </tr>
+            </table>
+
+        </div>
+        <!-- box-4 -->
+
+        <div class="quotation-box4 clearfix">
+           
+            <form action="">
+               
+                <div>
+                   <b> <label for="productName" >Product name: </label> </b>
+                    <select name="productName" id="select-product">
+                        <option value="">men's face wash</option>
+                        <option value="">hair oil</option>
+                    </select>
+                </div>
+                <div>
+                   <b> <label for="Brand" >Category name: </label> </b> 
+                    <select name="Brand" id="select-brand">
+                        <option value="">himalayan</option>
+                        <option value="">vvd</option>
+                    </select>
+                </div>
+
+                <div>
+                <input class="quotaion-submit-btn" type="submit" value="Add">
+                </div>
+
+            </form>
+            
+        </div>
+        <!-- box5- -->
+        <div class="quotation-box5 clearfix">
+             <hr>
+             <center><p>[vendor address] Address: 36, Velachery Bypass Rd, 
+                Velachery, Chennai, Tamil Nadu 600042
+            <br>
+                jiomart @gmail.com</p></center>
+        </div>
+        
+    </div>
+ 
+    <!-- Invoice -->
+
+    <div id="invoice" class="invoice" style="visibility: hidden; display: none;">
+                    
+     <!-- box1 -->
+         <div class="invoice-box1 clearfix">
+                <div class="">
+                    <br><br>
+                   <p> 
+                    [vendor Detail]: <br>
+                    36, Velachery Bypass Rd, 
+                    Velachery, Chennai, Tamil Nadu 600042
+                     <br>
+                    jiomart @gmail.com
+                   </p>
+             
+                </div>
+                <div class="invoice-name">
+                   <h1>
+                  <i>INVOICE</i>    
+                </h1> 
+                <label for="date">DATE</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date" id=""> <br>
+                <label for="Qno">INVOICE#</label> <input type="text" name="Qno" id="">
+
+                </div>
+       </div>     
+        <hr>
+
+        <!-- box2 -->
+    <div class="invoice-box2 clearfix">
+          <div class="bill-to">
+            <h3>BILL TO:</h3>
+            <p>[name] <br>
+               [address]<br>
+               [phone no] <br>
+               [abc@gmail.com] <br>
+            </p>
+          </div>
+          <div class="ship-to">
+            <h3>SHIP TO:</h3>
+            <p>[name] <br>
+                [address]<br>
+                [phone no] <br>
+                [abc@gmail.com] <br>
+             </p>
+          </div>
+    </div> 
+    <hr>
+    <!-- --box3--- -->
+    <div class="invoice-box3 clearfix">
+        <table id="invoice-table">
+            <tr>
+               <th>Product Id</th>
+               <th>Description</th>
+               <th>Quantity</th>
+               <th>Unit Price</th>  
+               <th>Line total</th>  
+            </tr>
+            <tr>
+               <td>1</td>
+               <td>Men's face wash 150 gram Himalayan brand</td>
+               <td>20</td>
+               <td>145</td>
+               <td>2900</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Women's moisturizing cream 100ml</td>
+                <td>15</td>
+                <td>210</td>
+                <td>3150</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Unisex sunscreen lotion SPF 50+</td>
+                <td>30</td>
+                <td>95</td>
+                <td>2850</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Men's deodorant spray 200ml</td>
+                <td>25</td>
+                <td>180</td>
+                <td>4500</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Women's shampoo 250ml</td>
+                <td>18</td>
+                <td>120</td>
+                <td>2160</td>
+              </tr>
+        </table>
+
+    </div>
+
+   <!-- --box4--- -->
+     <div class="invoice-box4 clearfix">
+          <div class="totaltable">
+            <table id="invoice-table">
+                <tr>
+                   <th>Sub total:</th>
+                   <td>$$$$$</td>
+                </tr>
+                <tr>
+                    <th>Processing fees:</th>
+                    <td>$$$$$</td>
+                 </tr>
+                 <tr>
+                    <th>Taxes:</th>
+                    <td>$$$$$</td>
+                 </tr>
+                 <tr>
+                    <th>Total:</th>
+                    <td>$$$$$</td>
+                 </tr>
+                 <tr>
+                    <th>Paid:</th>
+                    <td>$$$$$</td>
+                 </tr>
+                 <tr>
+                    <th>Total Due:</th>
+                    <td>$$$$$</td>
+                 </tr>
+            </table>
+
+          </div>
+     </div>
+<hr>
+     <!-- ----box5--- -->
+     <div class="invoice-box5 clearfix">
+         <h2>Thanks for your business</h2>
+         <div class="footAddress">
+            <p>[Company name]</p>
+            <p>[Address]</p>
+            <p>[Email]</p>
+            <p>[Phone number]</p>    
+        </div>
+
+
+     </div>
+  
+  </div>
+
+
+
+
+    <!-- goodsReceipt -->
+
+    <div id="goodsReceipt" class="goodsReceipt" style="visibility: hidden; display: none;">
+        <!-- box1 -->
+        <div class="goods-box1 clearfix">
+            <div class="">
+                <br><br>
+               <p> 
+                [vendor Detail]: <br>
+                36, Velachery Bypass Rd, 
+                Velachery, Chennai, Tamil Nadu 600042
+                <br>
+                jiomart @gmail.com
+               </p>
+         
+            </div>
+            <div class="goods-name">
+               <h1>
+              <i>GOOOS RECEIPT</i>    
+            </h1> 
+            <label for="date">DATE</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="date" id=""> <br>
+            <label for="Qno">RECEIPT#</label> <input type="text" name="Qno" id="">
+            </div>
+        </div>    
+   <!-- box2 -->
+    <div class="goods-box2 clearfix">
+        <table id="goods-table">
+            <tr>
+               <th>S.no</th>
+               <th>Item Description</th>
+               <th>quantity</th>
+               <th>weight</th>  
+               <th>received item</th>  
+            </tr>
+            <tr>
+               <td>1</td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td>
+                <input type="radio" name="ri">Yes
+                <input type="radio" name="ri">No
+               </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                 <input type="radio" name="ri">Yes
+                 <input type="radio" name="ri">No
+                </td>
+             </tr>
+             <tr>
+                <td>3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                 <input type="radio" name="ri">Yes
+                 <input type="radio" name="ri">No
+                </td>
+             </tr>
+             <tr>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                 <input type="radio" name="ri">Yes
+                 <input type="radio" name="ri">No
+                </td>
+             </tr>
+             <tr>
+                <td>5</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                 <input type="radio" name="ri">Yes
+                 <input type="radio" name="ri">No
+                </td>
+             </tr>
+        </table>
+        </div>   
+
+        <!-- box3 -->
+         <div class="goods-box3 clearfix">
+             <div class="receivedby">
+                <p id="line">__________________</p>
+                <p>Received By</p>
+             </div>
+             <div class="checkedby">
+                <p id="line">__________________</p>
+                <p>Checked By</p>
+             </div>
+         </div>
+    </div>
+
+
+<!-- right ending div --> </div>
+
+
+   </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
+
