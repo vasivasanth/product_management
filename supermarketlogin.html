@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>supermarket</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/1026cb4533.js" crossorigin="anonymous"></script>
+<body>
+
+    <div class="heading">
+        <h1>𝓢𝓾𝓹𝓮𝓻𝓶𝓪𝓻𝓴𝓮𝓽 🛒</h1>
+    </div>
+    <form id="loginform" action="#" method="get">
+        <div class="input-text">
+            <h2>Admin Login</h2>
+            <label for="">username</label> <br>
+            <i class="fa-solid fa-user"></i>
+            <input id="username" type="text"> <br>
+            <label for="">password</label> <br>
+            <i class="fa-solid fa-key"></i>
+            <input id="password" type="password"> <br>
+            <input type="submit" value="login"> <br>
+            <h5>OR</h2> 
+            <a href="#">Add user</a>
+        </div>
+
+
+    </form>
+    <script> 
+        document.getElementById('loginform').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        if (username === 'vasanth' && password === 'Vasanth@123') {
+            window.location.href = './homepage/homepage.html';
+        } else {
+            alert('Invalid username or password');
+        }
+    });
+    </script>
+</body>
+</html>

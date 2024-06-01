@@ -1,0 +1,74 @@
+body{
+    background-image: url(./image/flat-lay-vegetables-frame.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.heading{
+    font-size: 40px;
+    text-align: center;
+}
+
+form{
+    color: rgb(0, 0, 0);
+    background-color: rgba(254, 214, 155, 0.3);
+    box-shadow: 0 0 10px #000000;
+    width: 530px;
+    height: 450px;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    border-radius: 5px;
+}
+/* input text */
+.input-text{
+   width: 50%;
+   height: 50%;
+   margin-left:20%;
+   margin-top: 10%;
+}
+.input-text input[type=text]{
+    margin-top: 10px;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    height:25px;
+    width: 85%;
+}
+.input-text input[type=password]{
+    margin-top: 10px;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    height:25px;
+    width: 85%;
+
+
+}
+.input-text input[type=submit]{
+    margin-left: 36%;
+    border: 0px;
+    width: 30%;
+    height: 20%;
+    border-radius: 3px;
+    background-color: rgb(42, 190, 71);
+    box-shadow: 0 0 2px #000000;
+}
+.input-text h5{
+   /* position:absolute;
+   left: 230px; */
+   width: 40px;
+   border-left: 100px solid #000000; 
+   border-right: 110px solid #000000; 
+   line-height: 0.01em;
+   padding-left: 15px;
+   padding-right: 15px;
+
+}
+.input-text a{
+    color: #000000;
+    margin-left: 85px;   
+}
+.input-text h2{
+ text-align: center;   
+}
+
